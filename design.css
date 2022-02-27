@@ -352,37 +352,68 @@ p span{
     margin: 3rem 0;
 }
 
-.btn-box{
-    display: flex;
-    width: 10rem;
-    height: 3rem;
-    align-items: center;
-    /* justify-items: center; */
+
+button {
+    margin: 2rem;
+	width: 11rem;
+	height: 3.5rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+    /* padding: 0.5rem; */
+    justify-content: space-between;
+	border: none;
+	border-radius: 28px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+	background: hsl( var(--clr-white) );
 }
 
-.btn{
-    cursor: pointer;
-    border-radius: 28px;
-    width: 20rem;
-    
-    flex-direction: row;
-    /* align-items: flex-end; */
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    /* width: 20rem; */
-    z-index: 1;
-    height: 3rem;
+button, button span {
+	transition: 500ms;
 }
-  
 
-.icon-btn{
-    background-color: hsl( var(--clr-black-light) );
-    background-image: url('./starter-code/assets/desktop/icon-arrow-down.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 4rem;
-    height: 2rem;
+button .text {
+    position: relative;
+	transform: translateX(35px);
+	color: hsl( var(--clr-black-light) );
+	font-weight: bold;
+    font-size: var(--fs-400);
+    letter-spacing: 0.5rem;
+    left: -1rem;
+}
+
+button .icon {
+	position: absolute;
+	
+    background: hsl( var(--clr-black-light) );
     border-radius: 50px;
-    
-    /* z-index: 2; */
+	transform: translateX(110px);
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button svg {
+	width: 15px;
+	fill: #eee;
+}
+
+button:hover {
+	background: hsl( var(--clr-black-light) );
+}
+
+button:hover .text {
+	color: transparent;
+}
+
+button:hover .icon {
+	width: 150px;
+	border-left: none;
+	transform: translateX(0);
+}
+
+button:focus {
+	outline: none;
 }
