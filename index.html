@@ -3,22 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="index.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
+  <!-- Google fonts -->
+        
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">  
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+
   <title>Frontend Mentor | Clock App</title>
 </head>
 <body>
-  , it's currently
 
-  in
+  <main class="section-center">
+    <div class="quote-container">
+      <div class="quote-box">
+        <div class="quote-text">“The science of operations, as derived from mathematics more especially, is a science of itself, and has its own abstract truth and value.”</div>
+        <div class="quote-author">Ada Lovelace</div>
+      </div>
+      <button type="button" class="refresh"><img src="./starter-code/assets/desktop/icon-refresh.svg" alt=""></button>
+    </div>
 
-  More
-  Less
 
-  Current timezone
-  Day of the year
-  Day of the week
-  Week number
+    <div class="weather-time-container">
+      <div class="weather-time-container-info">
+        <div class="day-box">
+          <i class="icon-day-box"></i>
+          <h4 class="fs-500 ff-serif">GOOD MORNING, IT’S CURRENTLY</h4>
+        </div>
+
+        <div class="hour-box">
+          <h1 class="fs-900 ff-serif fs-bold hour-text">11:37</h1>
+          <div class="hour-spec">BST</div>
+        </div>
+
+        <div class="place-box">
+          <h4 class="fs-500 ff-serif localisation">IN LONDON, UK</h4>
+        </div>
+      </div>
+      <div class="btn-box">
+        <button onclick="btnToggle()" type="button" class="btn noselect"><span class='text'>MORE</span><span class="icon"><img src="./starter-code/assets/desktop/icon-arrow-down.svg" alt=""></span></button>
+      </div>  
+    </div>
+
+
+
+  </main>
+
+  <div class="further-information">
+    <div class="time-zone-box">
+      <h5 class="fs-400 ff-serif fs-bold uppercase time-zone-title">Current timezone</h5>
+      <h2 class="fs-700 ff-serif fs-bold time-zone-text">Europe/London</h2>
+    </div>
+    <div class="time-zone-day-week">
+      <h5 class="fs-400 ff-serif fs-bold uppercase time-zone-day-week-title">Day of the week</h5>
+      <h2 class="fs-700 ff-serif fs-bold time-zone-day-week-text">5</h2>
+    </div>
+    
+    <div class="line"></div>
+
+    <div class="time-zone-day-year">
+      <h5 class="fs-400 ff-serif fs-bold uppercase time-zone-day-year-title">Day of the year</h5>
+      <h2 class="fs-700 ff-serif fs-bold time-zone-day-text">295</h2>
+    </div>
+    <div class="time-zone-weeks">
+      <h5 class="fs-400 ff-serif fs-bold uppercase time-zone-weeks-title">Week number</h5>
+      <h2 class="fs-700 ff-serif fs-bold time-zone-weeks-text">42</h2>
+    </div>
+  </div>
+
+ 
 </body>
+
+<script src="./index.js"></script>
 </html>
+

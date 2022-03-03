@@ -9,19 +9,19 @@
     --clr-black:0 0% 0%;
     --clr-black-light:0 0% 19%;
     --clr-white:0 0% 100%;
-    
+    --clr-grey:0 0% 59%;
 
 
     
 
     
     /* font-sizes */
-    --fs-900: clamp(5rem,8vw + 1rem,9.375rem);
+    --fs-900: 14rem;
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
     --fs-500: 1.75rem;
-    --fs-400: 1.3rem;
+    --fs-400: 1.7rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
     
@@ -95,7 +95,7 @@ p {
 /* set up the body */
 body {
     font-family: var(--ff-sans-normal);
-    font-size: var(--fs-300);
+    font-size: var(--fs-400);
     color: hsl( var(--clr-dark) );
     background-color: hsl( var(--clr-white) );
     line-height: 1.5;
@@ -353,7 +353,7 @@ p span{
 }
 
 
-button {
+.btn {
     margin: 2rem;
 	width: 11rem;
 	height: 3.5rem;
@@ -368,11 +368,11 @@ button {
 	background: hsl( var(--clr-white) );
 }
 
-button, button span {
+.btn, .btn span {
 	transition: 500ms;
 }
 
-button .text {
+.btn .text {
     position: relative;
 	transform: translateX(35px);
 	color: hsl( var(--clr-black-light) );
@@ -382,7 +382,7 @@ button .text {
     left: -1rem;
 }
 
-button .icon {
+.btn .icon {
 	position: absolute;
 	
     background: hsl( var(--clr-black-light) );
@@ -395,25 +395,25 @@ button .icon {
 	justify-content: center;
 }
 
-button svg {
+.btn svg {
 	width: 15px;
 	fill: #eee;
 }
 
-button:hover {
+.btn:hover {
 	background: hsl( var(--clr-black-light) );
 }
 
-button:hover .text {
+.btn:hover .text {
 	color: transparent;
 }
 
-button:hover .icon {
+.btn:hover .icon {
 	width: 150px;
 	border-left: none;
 	transform: translateX(0);
 }
 
-button:focus {
+.btn:focus {
 	outline: none;
 }
