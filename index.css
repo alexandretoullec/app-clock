@@ -16,17 +16,18 @@ body{
 .quote-container{
     position: relative;
     width: 45rem;
-    /* display: flex; */
-    display: block;
+    display: flex;
+    /* display: block; */
     flex-direction: row;
     margin-bottom: 20rem;
     /* transform: translate(100%); */
-    transform: translateY(-200%);
+    transform: translateY(0);
     transition: transform 500ms ease-in-out;
 }
 
-.quote-container[data-visible="true"]{
-    transform: translateY(0);
+.quote-container[data-visible="false"]{
+    transform: translateY(200);
+    display: none;
 }
 
 .quote-text{
@@ -42,6 +43,7 @@ body{
     background: transparent;
     border: none;
     display: flex;
+    width: 2rem;
 }
 
 .quote-container button img {
@@ -79,19 +81,18 @@ body{
     background: hsl( var(--clr-grey) );
     opacity: 0.9;
     color: hsl(var(--clr-black-light));
-    
     grid-template-columns: 1fr 1rem 1fr;
     justify-items:flex-start ;
     align-items: center;
     padding: 6rem 15rem;
-    /* transform: translate(100%); */
+    
     transition: transform 500ms ease-in-out;
-    transform: translateY(0);
+    /* transform: translateY(0); */
 }
 
 .further-information[data-visible="true"]{
     display: grid;
-    transform: translateY(-100%);
+    transform: translateY(0);
 }
 
 .time-zone-day-week{
