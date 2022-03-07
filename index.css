@@ -1,7 +1,7 @@
 @import url('./design.css');
 
 body{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 0.5)), url("./starter-code/assets/desktop/bg-image-daytime.jpg");
+    /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 0.5)), url("./starter-code/assets/desktop/bg-image-daytime.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     color: hsl(var(--clr-white));
@@ -56,6 +56,26 @@ body{
     position: relative;
     display: flex;
     justify-content: space-between;
+}
+
+.weather-time-container-info{
+    width: 45rem;
+}
+
+.day-box{
+    display: flex;
+    align-items: center;
+}
+
+.icon-day-box{
+    border: none;
+    background: url('./starter-code/assets/desktop/icon-moon.svg');
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 0.5rem;
+    
 }
 
 .hour-box{
@@ -127,6 +147,109 @@ body{
 
 .further-information[data-visible="false"]{
     display: none;
+}
+
+
+/* media querry */
+
+
+/* tablet */
+@media (max-width:767px) {
+    body{
+        margin: 0;
+        padding : 0;
+    }
+
+
+    .section-center{
+        margin: 3rem 2rem;
+        padding : 0;
+    }
+
+    .quote-container{
+        width: 35rem;
+        margin-bottom: 18rem;
+    }
+
+    .weather-time-container{
+        width: 25rem;
+        flex-direction: column;
+    }
+
+    .further-information{
+        margin: 0;
+        padding : 4rem;
+    }
+
+    .line{
+        display: none;
+    }
+
+}
+
+
+@media (max-width:501px) {
+    body{
+        margin: 0;
+        padding : 0;
+    }
+
+    .section-center{
+        margin-bottom: 6rem;
+    }
+
+    .quote-container{
+        width: 25rem;
+        
+        margin-bottom: 14rem;
+    }
+
+    .btn-box{
+        margin-top: 2rem;
+    }
+
+    .weather-time-container{
+        margin-top: 3rem;
+    }
+
+    .further-information{
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding : 4rem;
+        
+    }
+
+    
+
+    .further-information > div{
+        display: flex;
+        justify-content: space-between;
+        width: 25rem;
+    }
+
+    .time-zone-day-week{
+        grid-column: 1;
+    }
+    
+    .line{
+        display: none;
+        border-left: none;
+        height: 0rem;
+        
+    }
+
+    .time-zone-day-year{
+        grid-column: 1;
+    }
+    
+    .time-zone-weeks{
+        grid-column: 1;
+    }
+
+    .time-zone-day-week,.time-zone-weeks{
+        margin-left: 0;
+    }
+
 }
 
 

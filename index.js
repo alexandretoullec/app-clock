@@ -26,6 +26,17 @@ btnQuote = document.querySelector('.refresh');
 quoteText = document.querySelector('.quote-text');
 quoteAuthor = document.querySelector('.quote-author');
 
+
+// changing according to hours
+
+const icon = document.querySelector('.icon-day-box') ;
+const good = document.querySelector('.good') ;
+const back = document.body;
+
+
+
+
+
 btnLessMore.addEventListener("click",()=> {
     if(spanBtn.innerHTML==="MORE"){
         spanBtn.innerText="LESS"
@@ -119,11 +130,33 @@ function callAPI (timeZone) {
 
         // schedule
 
-        const schedParse = Date.parse(data.datetime)
-        const dateHour = new Date(schedParse)
+        // const schedParse = Date.parse(data.datetime)
+        const dateHour = new Date()
         console.log(dateHour.getHours());
         console.log(dateHour.getMinutes());
         hourMin.innerText = `${dateHour.getHours()}:${dateHour.getMinutes()}`
+
+        // chaning according time of day
+
+        if(dateHour.getHours()>=5 && dateHour.getHours()<=12){
+            icon.style.background='url(./starter-code/assets/desktop/icon-sun.svg)'
+            good.innerText="GOOD MORNING, IT’S CURRENTLY"
+        }else if(dateHour.getHours()>12 && dateHour.getHours()<=18){
+            good.innerText="Good afternoon, IT’S CURRENTLY"
+        }else if(dateHour.getHours()>18 && dateHour.getHours()+24 <=29){
+            good.innerText="Good evening, IT’S CURRENTLY"
+        }
+
+        // changing background
+
+        if(dateHour.getHours()>5 && dateHour.getHours()<=18){
+            icon.style.background='url(./starter-code/assets/desktop/icon-sun.svg)'
+            back.style.backgroundImage ='linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 0.5)), url("./starter-code/assets/desktop/bg-image-daytime.jpg")'
+        }else{
+            icon.style.background='url(./starter-code/assets/desktop/icon-moon.svg)'
+            back.style.backgroundImage='url(./starter-code/assets/desktop/bg-image-nighttime.jpg)'
+
+        }
 
     })
 }
@@ -150,3 +183,6 @@ function quoteGen (){
 
 
 btnQuote.addEventListener('click',quoteGen)
+
+
+
