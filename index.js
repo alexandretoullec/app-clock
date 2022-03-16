@@ -114,7 +114,7 @@ function getIP () {
 
 
 function callAPI (timeZone) {
-    fetch(`http://worldtimeapi.org/api/timezone/${timeZone}`)
+    fetch(`https://worldtimeapi.org/api/timezone/${timeZone}`)
     .then((reponse) => {
         return reponse.json();
     })
